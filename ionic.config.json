@@ -1,0 +1,7 @@
+{
+  "name": "corridas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
