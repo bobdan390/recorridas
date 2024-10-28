@@ -1,1 +1,36 @@
 
+ion-tabs{
+    background-color: white;
+    --background: white;
+}
+
+ion-tab-bar {
+    border: 1px solid #F58634;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 65px;
+
+    ion-label {
+        font-size: 12px;
+        color: #F58634;
+        margin-top: 8px;
+    }
+}
+
+.btnCenter {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #F58634;
+    border-radius: 146px;
+    z-index: 9999;
+    bottom: 10px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    border: 5px solid #A9C0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

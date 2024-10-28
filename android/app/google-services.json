@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "617714519331",
+    "firebase_url": "https://recorridas-5304f-default-rtdb.firebaseio.com",
+    "project_id": "recorridas-5304f",
+    "storage_bucket": "recorridas-5304f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617714519331:android:b319115a3b41182f751096",
+        "android_client_info": {
+          "package_name": "io.ionic.recorridas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPBsul-C9vWwlJ1yaDiuP0rsbQHyeDdhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

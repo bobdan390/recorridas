@@ -1,17 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header">
+    <div class="userData">
+      <p>{{label_1}}</p>
+      <p>{{user_id_1}}</p>
+    </div>
+    <div class="">
+      <div class="bellIconAround">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M427.68 351.43C402 320 383.87 304 383.87 217.35 383.87 138 343.35 109.73 310 96c-4.43-1.82-8.6-6-9.95-10.55C294.2 65.54 277.8 48 256 48s-38.21 17.55-44 37.47c-1.35 4.6-5.52 8.71-9.95 10.53-33.39 13.75-73.87 41.92-73.87 121.35C128.13 304 110 320 84.32 351.43 73.68 364.45 83 384 101.61 384h308.88c18.51 0 27.77-19.61 17.19-32.57zM320 384v16a64 64 0 01-128 0v-16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+      </div>
+    </div>
+  </div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="contentTurnos">
+    <div class="selectTurnos">
+      <small>Turno</small>
+      <small>Turno de {{turnoSeleccionado.inicio}} a {{turnoSeleccionado.fin}} hrs.</small>
+    </div>
+  </div>
+
+  <div>
+    <p class="tittle">LISTADO DE TAREAS</p>
+  </div>
+
+  <div *ngFor="let tarea of tareas; index as i">
+
+    <div class="card_tarea" (click)="abrirDetallesPunto(i)">
+      <div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5 5.83341V14.1667C17.5 16.6667 16.25 18.3334 13.3333 18.3334H6.66667C3.75 18.3334 2.5 16.6667 2.5 14.1667V5.83341C2.5 3.33341 3.75 1.66675 6.66667 1.66675H13.3333C16.25 1.66675 17.5 3.33341 17.5 5.83341Z" stroke="#F58634" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.0833 3.75V5.41667C12.0833 6.33333 12.8333 7.08333 13.7499 7.08333H15.4166" stroke="#F58634" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.66675 10.8333H10.0001" stroke="#F58634" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.66675 14.1667H13.3334" stroke="#F58634" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </div>
+      <div>
+        {{tarea.tarea}}
+      </div>
+      <div>
+        <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.983107 0.957961C1.22718 0.713883 1.62291 0.713883 1.86699 0.957961L7.30033 6.39129C8.18607 7.27704 8.18607 8.72277 7.30033 9.60851L1.86699 15.0418C1.62291 15.2859 1.22718 15.2859 0.983107 15.0418C0.739029 14.7978 0.739029 14.402 0.983107 14.158L6.41644 8.72463C6.81403 8.32704 6.81403 7.67277 6.41644 7.27518L0.983107 1.84184C0.739029 1.59777 0.739029 1.20204 0.983107 0.957961Z" fill="#F58634"/>
+          </svg>        
+      </div>
+    </div>
+
+    <div class="detailPoint" *ngIf="puntoAbierto == i">
+      <p>Indicaciones: {{tarea.indicaciones}}</p>
+      <p class="buttonQR" (click)="takePicture(tarea, i)" style="text-align: center;">Tomar foto</p>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+
+  <div style="margin-bottom: 50px;"></div>
+
 </ion-content>

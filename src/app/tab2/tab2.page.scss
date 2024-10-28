@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    .userData {
+        color: #F58634;
+        padding: 3px;
+        :first-child {
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        :nth-child(2) {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+    .bellIconAround {
+        border: 1px solid #F58634;
+        border-radius: 100px;
+        padding: 7px 9px;
+        svg {
+            width: 22px;
+            height: 22px;
+            color: #F58634;
+        }
+    }
+}
+
+.contentTurnos {
+    padding: 10px;
+    .selectTurnos {
+        border: 1px solid #F58634;
+        border-radius: 10px;
+        padding: 10px 15px;
+        :nth-child(1) {
+            display: flex;
+            color: #F58634;
+            padding-bottom: 8px;
+        }
+        :nth-child(2) {
+            margin: 0;
+            color: #101317;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.tittle {
+    text-align: center;
+    color: #F58634;
+    margin: 45px;
+    font-weight: bolder;
+}
+
+.card_tarea {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-left: 1px solid black;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 30px;
+    margin-bottom: 20px;
+    :nth-child(2) {
+        padding-bottom: 5px;
+        color: #F58634;
+        font-weight: bold;
+        width: 70%;
+    }
+}
+
+.detailPoint {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    text-align: center;
+    .buttonQR {
+        color: rgb(0, 0, 255);
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,10 @@
+OPEN node_modules/@angular/fire/compat/database/interfaces
+comentar lineas 50, 55 
+---> //forEach
+
+OPEN node_modules\phonegap-plugin-barcodescanner\src\android\barcodescanner.gradle
+cambiar "compile" por "implementation"
+
+OPEN android\gradle.properties
+agregar  --> android.enableJetifier=true
+asegurarse que existe --> android.useAndroidX=true,  si no agregarlo 
